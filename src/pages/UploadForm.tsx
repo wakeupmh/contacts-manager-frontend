@@ -59,7 +59,8 @@ export const UploadForm = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to upload file');
+        const jsonResponse = await response.json();
+        throw new Error(`Failed to upload file: ${jsonResponse?.error}`);
       }
 
       const data = await response.json();
