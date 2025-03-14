@@ -47,7 +47,7 @@ export const Contacts = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:3000/contacts?page=${page}&limit=${limit}`);
+      const response = await fetch(`https://contacts-manager-backend-r48j.onrender.com/contacts?page=${page}&limit=${limit}`);
       if (!response.ok) {
         throw new Error('Failed to fetch contacts');
       }

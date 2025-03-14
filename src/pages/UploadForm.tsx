@@ -50,7 +50,7 @@ export const UploadForm = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:3000/upload', {
+      const response = await fetch('https://contacts-manager-backend-r48j.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
