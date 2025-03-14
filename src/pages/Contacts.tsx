@@ -20,7 +20,6 @@ import {
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -47,7 +46,7 @@ export const Contacts = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`https://contacts-manager-backend-r48j.onrender.com/contacts?page=${page}&limit=${limit}`);
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/contacts?page=${page}&limit=${limit}`);
       if (!response.ok) {
         throw new Error('Failed to fetch contacts');
       }
