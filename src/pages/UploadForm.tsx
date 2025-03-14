@@ -50,7 +50,7 @@ export const UploadForm = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch(`${process.env.VITE_API_URL}/upload`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/upload`, {
         method: 'POST',
         body: formData,
       });

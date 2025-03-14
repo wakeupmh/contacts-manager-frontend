@@ -46,7 +46,7 @@ export const Contacts = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${process.env.VITE_API_URL}/contacts?page=${page}&limit=${limit}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contacts?page=${page}&limit=${limit}`);
       if (!response.ok) {
         throw new Error('Failed to fetch contacts');
       }
