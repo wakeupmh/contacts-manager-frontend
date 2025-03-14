@@ -46,7 +46,11 @@ export const Contacts = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/contacts?page=${page}&limit=${limit}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contacts?page=${page}&limit=${limit}`, {
+        headers: {
+          'Access-Control-Allow-Origin':'*'
+        }
+      });
       if (!response.ok) {
         throw new Error('Failed to fetch contacts');
       }

@@ -53,6 +53,9 @@ export const UploadForm = () => {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/upload`, {
         method: 'POST',
         body: formData,
+        headers: {
+          'Access-Control-Allow-Origin':'*'
+        }
       });
 
       if (!response.ok) {
