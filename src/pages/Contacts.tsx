@@ -96,7 +96,7 @@ export const Contacts = () => {
           </div>
         ) : (
           <Table>
-            <TableCaption>A list of your contacts.</TableCaption>
+            <TableCaption>list of your contacts</TableCaption>
             <TableHeader>
               <TableRow>
                 <TableHead>Email</TableHead>
